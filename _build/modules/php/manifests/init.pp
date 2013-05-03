@@ -24,6 +24,26 @@ class php {
   	    ensure => latest,
     }
 
+    package { "php5-xcache":
+        ensure => latest,
+    }
+
+    package { "php-apc":
+        ensure => latest,
+    }
+
+    package { "php5-pgsql":
+        ensure => latest,
+    }
+
+    package { "php5-mysqlnd":
+        ensure => latest,
+    }
+
+    package { "php5-memcached":
+        ensure => latest,
+    }
+
 	exec {"/usr/bin/pecl install mongo":
     	require => [Package['php5-dev'], Package['make']]
     }
