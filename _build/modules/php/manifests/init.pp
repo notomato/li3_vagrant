@@ -1,0 +1,35 @@
+# Manage a MongoDB installation
+class php {
+	package { 'php5-dev':
+		ensure => latest;
+    }
+
+    package { 'php5-cli':
+        ensure => latest;
+    }
+
+    package { "php-pear":
+  	    ensure => latest,
+    }
+
+    package { "php5-xdebug":
+  	    ensure => latest,
+    }
+
+    package { "php5-mcrypt":
+  	    ensure => latest,
+    }
+
+    package { "php5-gd":
+  	    ensure => latest,
+    }
+
+	exec {"/usr/bin/pecl install mongo":
+    	require => [Package['php5-dev'], Package['make']]
+    }
+
+    package { "libapache2-mod-php5":
+    	ensure => present,
+    	require => [Package['apache2'], Package['php5-dev']]
+    }
+}
