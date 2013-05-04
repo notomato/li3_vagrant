@@ -31,6 +31,7 @@ class mysql {
   exec {
     'setup-mysql':
       cwd     => '/root',
+      returns => [0, 1],
       command => '/root/mysql.setup',
       creates => '/root/mysql.done';
   }

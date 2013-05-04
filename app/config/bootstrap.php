@@ -31,6 +31,8 @@
  */
 require __DIR__ . '/bootstrap/libraries.php';
 
+require dirname(dirname(__DIR__)) . '/libraries/autoload.php';
+
 /**
  * The error configuration allows you to use the filter system along with the advanced matching
  * rules of the `ErrorHandler` class to provide a high level of control over managing exceptions in

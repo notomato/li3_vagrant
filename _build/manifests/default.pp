@@ -15,6 +15,10 @@ exec { "apt-get update":
      require => Exec['add php54 apt-repo']
 }
 
+exec { "apt-get upgrade":
+	 command => 'sudo apt-get -y dist-upgrade'
+}
+
 include stdlib
 include apt
 include dev
@@ -44,7 +48,7 @@ file { "/etc/apache2/mods-enabled/rewrite.load":
 
 file { "/etc/apache2/sites-available/default":
 	ensure => present,
-	source => "/vagrant/_build/manifests/apache.default",
+	source => "/vagrant/_build/templates/apache2/default",
 	require => Package["apache2"],
 	notify => Service['apache2']
 }
@@ -52,7 +56,7 @@ file { "/etc/apache2/sites-available/default":
 file { "/etc/php5/apache2/php.ini":
 	ensure => present,
 	require => [Package['apache2'], Package['php5-dev'], Package['libapache2-mod-php5']],
-	source => "/vagrant/_build/manifests/php.ini",
+	source => "/vagrant/_build/templates/php/php.ini",
 	notify => Service['apache2']
 }
 
@@ -64,10 +68,21 @@ exec { "php_cli":
 # Start beanstalkd
 file { "/etc/default/beanstalkd":
 	ensure => present,
-	source => "/vagrant/_build/manifests/beanstalkd.default",
+	source => "/vagrant/_build/templates/beanstalkd/default",
 	require => Package["beanstalkd"]
 }
 
-exec { "resources_permissions"
+exec { "resources_permissions":
     command => "chmod -R 0777 /vagrant/app/resources"
+}
+
+# Redis commander
+exec {
+    "install_redis_commander":
+        command => "npm install -g redis-commander",
+        require => Package['redis'];
+    "run_redis_commander":
+            command => "redis-commander -p 7500&",
+            require => Package['redis'];
+
 }

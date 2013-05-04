@@ -58,11 +58,13 @@ class php {
     }
 
 	exec {"/usr/bin/pecl install mongo":
-    	require => [Package['php5-dev'], Package['make']]
+    	require => [Package['php5-dev'], Package['make']],
+    	returns => [0, 1]
     }
 
 	exec {"/usr/bin/pecl install redis":
-    	require => [Package['php5-dev'], Package['make']]
+    	require => [Package['php5-dev'], Package['make']],
+    	returns => [0, 1]
     }
 
     package { "libapache2-mod-php5":
