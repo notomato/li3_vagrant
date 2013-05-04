@@ -1,5 +1,5 @@
 .idea
 .DS_Store
-libraries/* 
+libraries 
 app/resources/tmp/cache/templates/*
 
