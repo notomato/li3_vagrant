@@ -97,6 +97,14 @@ Redis-commander: http://localhost:7501 or http://192.168.50.4:7500
 
 Note: this is not currently set to launch on reboot, just run `redis-commander -p 7500` to relaunch.
 
+#### Memcached
+
+Memcache monitoring panel
+
+http://localhost:8081/tools/memcached/ or http://192.168.50.4/tools/memcached
+
+![apc](/_docs/img/memcached.png)
+
 ## Included plugins
 
 Some popular plugins included, managed by composer. Take a look at composer.json to see how to add other plugins from git repositories.
