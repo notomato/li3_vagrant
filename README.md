@@ -81,7 +81,7 @@ http://localhost:9201/_plugin/bigdesk/ or http://192.168.50.4:9200/_plugin/bigde
 
 Web interface: http://localhost:28018/ or http://192.168.50.4:28017
 
-![Mongodb](/_docs/mongodb.png "Optional title")
+![Mongodb](/_docs/img/mongodb.png "Optional title")
 
 #### Couchdb
 
