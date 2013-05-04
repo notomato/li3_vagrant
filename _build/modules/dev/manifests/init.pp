@@ -19,6 +19,18 @@ class dev {
 		"vim": ensure => latest
     }
 
+    package {
+		"python-setuptools": ensure => latest
+    }
+
+    package {
+		"nodejs": ensure => latest
+    }
+
+    package {
+		"python": ensure => latest
+    }
+
   package {
     [
       'puppet-lint',

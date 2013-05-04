@@ -1,5 +1,5 @@
-class redis {
-    package { 'redis-server':
+class memcached {
+    package { 'memcached':
         ensure => latest,
         require => Exec['apt-get update']
     }

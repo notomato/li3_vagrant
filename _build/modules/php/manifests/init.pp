@@ -24,6 +24,10 @@ class php {
   	    ensure => latest,
     }
 
+    package { "php5-curl":
+        ensure => latest,
+    }
+
     package { "php5-xcache":
         ensure => latest,
     }
@@ -44,7 +48,20 @@ class php {
         ensure => latest,
     }
 
+    package { "php5-sqlite":
+        ensure => latest,
+    }
+
+    package { "phpmyadmin":
+        ensure => latest,
+        require => Package['apache2']
+    }
+
 	exec {"/usr/bin/pecl install mongo":
+    	require => [Package['php5-dev'], Package['make']]
+    }
+
+	exec {"/usr/bin/pecl install redis":
     	require => [Package['php5-dev'], Package['make']]
     }
 

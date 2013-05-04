@@ -25,8 +25,13 @@ include java
 include ruby
 include apache2
 include mongodb
+include mysql
+include postgres
+include couchdb
 include elasticsearch
 include beanstalkd
+include memcached
+include redis
 
 apache::loadmodule{"rewrite": }
 
@@ -51,27 +56,18 @@ file { "/etc/php5/apache2/php.ini":
 	notify => Service['apache2']
 }
 
+exec { "php_cli":
+	require => Package['php5-dev'],
+	command => "/usr/bin/sudo ln -sf /etc/php5/apache2/php.ini /etc/php5/cli/php.ini"
+}
+
 # Start beanstalkd
 file { "/etc/default/beanstalkd":
 	ensure => present,
 	source => "/vagrant/_build/manifests/beanstalkd.default",
-	require => Package["beanstalkd"],
-	notify => Service["beanstalkd"]
+	require => Package["beanstalkd"]
 }
 
-# Import the database dump
-exec { "mongorestore":
-    cwd => "/vagrant/",
-    require => Package["mongodb-10gen"]
+exec { "resources_permissions"
+    command => "chmod -R 0777 /vagrant/app/resources"
 }
-
-# Initialise the search index in Elasticsearch
-exec { "/usr/bin/php libraries/lithium/console/lithium.php search":
-    cwd => "/vagrant/app/",
-    require => [
-        Package["apache2"],
-        Package["php5-dev"],
-        Package["php5-cli"]
-    }
-}
-
