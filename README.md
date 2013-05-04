@@ -21,9 +21,9 @@ The box is based on the default vagrant precise64 box. Credit for most of the mo
 
 #### Languages
 
-PHP 5.4
-Ruby latest
-Python
+ - PHP 5.4
+ - Ruby latest
+ - Python
 
 #### Webserver
 
@@ -45,7 +45,7 @@ Python
 
 #### Other
 
-nodejs/npm
+ - nodejs/npm
 
 ## Plugins and Extras
 
@@ -109,14 +109,14 @@ http://localhost:8081/tools/memcached/ or http://192.168.50.4/tools/memcached
 
 Some popular plugins included, managed by composer. Take a look at composer.json to see how to add other plugins from git repositories.
 
-li3_access
-li3_docs
-li3_quality
-li3_paginate
-li3_quality
-li3_queue
-lithium
-manual
+ - li3_access
+ - li3_docs
+ - li3_quality
+ - li3_paginate
+ - li3_quality
+ - li3_queue
+ - lithium
+ - manual
 
 
 
