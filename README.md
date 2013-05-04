@@ -1,6 +1,6 @@
 # li3_vagrant
 
-This provides a complete vagrant box, with everything you need to get started with the lithium framework.
+This provides a complete vagrant box, with everything you need to get started with the Lithium PHP framework.
 
 To get started in 4 steps:
 
@@ -13,7 +13,7 @@ vagrant up
 
 If you open http://localhost:8081 you should see:
 
-![Alt text](/_docs/init.png)
+![Alt text](/_docs/img/init.png)
 
 The box is based on the default vagrant precise64 box. Credit for most of the modules goes to guardian/vagrants.
 
