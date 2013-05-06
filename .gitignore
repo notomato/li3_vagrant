@@ -4,3 +4,4 @@
 libraries 
 app/resources/tmp/cache/templates/*
 libraries/*
+composer.lock

@@ -24,7 +24,7 @@ class dev {
     }
 
     exec {
-        'add nodejs repo':
+        "add_nodejs_repo":
             command => '/usr/bin/add-apt-repository ppa:chris-lea/node.js -y',
             require => [
                 Package['python-software-properties'],
@@ -33,9 +33,9 @@ class dev {
     }
 
     exec {
-        'install nodejs':
-            command => 'apt-get install nodejs -y',
-            require => 'add nodejs repo';
+        "install_nodejs":
+            command => "apt-get install nodejs -y",
+            require => Exec["add_nodejs_repo"];
 
     }
 
