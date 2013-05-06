@@ -3,4 +3,4 @@
 .DS_Store
 libraries 
 app/resources/tmp/cache/templates/*
-
+libraries/*
