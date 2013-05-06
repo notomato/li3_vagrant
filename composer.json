@@ -8,8 +8,7 @@
         "unionofrad/li3_queue": "dev-master",
         "primetheus/li3_paginate": "dev-master",
         "tmaiaroto/li3_access": "dev-master",
-        "unionofrad/manual": "dev-master",
-        "unionofrad/framework": "dev-master"
+        "unionofrad/manual": "dev-master"
     },
     "repositories": [
         {
