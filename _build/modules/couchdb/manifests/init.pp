@@ -16,7 +16,11 @@ class couchdb {
 
     service { 'couchdb':
         ensure => running,
-        enable => true;
+        enable => true,
+        require => [
+            Exec['add_couchdb_ppa'],
+            Package['couchdb']
+        ]
     }
 
     file { "/etc/couchdb/local.ini":

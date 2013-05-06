@@ -6,6 +6,7 @@
     Alias /tools/phpmyadmin "/usr/share/phpmyadmin/"
     Alias /tools/apc "/usr/share/doc/php-apc/apc.php"
     Alias /tools/memcached "/vagrant/_build/templates/memcached/memcache.php"
+    Alias /tools/rockmongo "/var/www/tools/rockmongo"
 
 	<Directory />
 		Options FollowSymLinks

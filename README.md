@@ -83,6 +83,10 @@ Web interface: http://localhost:28018/ or http://192.168.50.4:28017
 
 ![Mongodb](https://raw.github.com/notomato/li3_vagrant/master/_docs/img/mongodb.png "Optional title")
 
+Rockmongo Admin GUI
+
+http://localhost:8081/tools/rockmongo or http://192.168.50.4/tools/rockmongo
+
 #### Couchdb
 
 Futon: http://localhost:5985/_utils/ or http://192.168.50.4:5984/_utils/

@@ -95,3 +95,10 @@ exec {
             ];
 
 }
+
+# rockmongo
+exec {
+	"install_rockmongo":
+		command => "git clone https://github.com/iwind/rockmongo.git /var/www/tools/rockmongo",
+		require => Package['git']
+}
