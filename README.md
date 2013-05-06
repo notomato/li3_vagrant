@@ -13,7 +13,7 @@ vagrant up
 
 If you open http://localhost:8081 you should see:
 
-![Alt text](/_docs/img/init.png)
+![Alt text](https://github.com/notomato/li3_vagrant/blob/master/_docs/img/init.png)
 
 The box is based on the default vagrant precise64 box. Credit for most of the modules goes to guardian/vagrants.
 
@@ -55,45 +55,45 @@ Apc monitoring panel
 
 http://localhost:8081/tools/apc/ or http://192.168.50.4/tools/apc
 
-![apc](/_docs/img/apc.png)
+![apc](https://github.com/notomato/li3_vagrant/blob/master/_docs/img/apc.png)
 
 #### PhpMyAdmin
 
 Accessible at http://localhost:8081/phpmyadmin, default user is `root` with no password.
 
-![phpMyAdmin](/_docs/img/phpmyadmin.png "phpMyAdmin")
+![phpMyAdmin](https://github.com/notomato/li3_vagrant/blob/master/_docs/img/phpmyadmin.png "phpMyAdmin")
 
 #### Elasticsearch Plugins
 
 http://localhost:9201/_plugin/head/ or http://192.168.50.4:9200/_plugin/head/
 
-![Elasticsearch head plugin](/_docs/img/es_head.png "Elasticsearch head plugin")
+![Elasticsearch head plugin](https://github.com/notomato/li3_vagrant/blob/master/_docs/img/es_head.png "Elasticsearch head plugin")
 
 http://localhost:9201/_plugin/paramedic/index.html or http://192.168.50.4:9200/_plugin/paramedic/index.html
 
-![Elasticsearch paramedic plugin](/_docs/img/es_paramedic.png "Elasticsearch paramedic plugin")
+![Elasticsearch paramedic plugin](https://github.com/notomato/li3_vagrant/blob/master/_docs/img/es_paramedic.png "Elasticsearch paramedic plugin")
 
 http://localhost:9201/_plugin/bigdesk/ or http://192.168.50.4:9200/_plugin/bigdesk/
 
-!["Elasticsearch bigdesk plugin"](/_docs/img/es_bigdesk.png "Elasticsearch bigdesk plugin")
+!["Elasticsearch bigdesk plugin"](https://github.com/notomato/li3_vagrant/blob/master/_docs/img/es_bigdesk.png "Elasticsearch bigdesk plugin")
 
 #### MongoDb
 
 Web interface: http://localhost:28018/ or http://192.168.50.4:28017
 
-![Mongodb](/_docs/img/mongodb.png "Optional title")
+![Mongodb](https://github.com/notomato/li3_vagrant/blob/master/_docs/img/mongodb.png "Optional title")
 
 #### Couchdb
 
 Futon: http://localhost:5985/_utils/ or http://192.168.50.4:5984/_utils/
 
-![Futon](/_docs/img/futon.png)
+![Futon](https://github.com/notomato/li3_vagrant/blob/master/_docs/img/futon.png)
 
 #### Redis
 
 Redis-commander: http://localhost:7501 or http://192.168.50.4:7500
 
-![Redis commander](/_docs/img/redis_commander.png)
+![Redis commander](https://github.com/notomato/li3_vagrant/blob/master/_docs/img/redis_commander.png)
 
 Note: this is not currently set to launch on reboot, just run `redis-commander -p 7500` to relaunch.
 
@@ -103,7 +103,7 @@ Memcache monitoring panel
 
 http://localhost:8081/tools/memcached/ or http://192.168.50.4/tools/memcached
 
-![apc](/_docs/img/memcached.png)
+![apc](https://github.com/notomato/li3_vagrant/blob/master/_docs/img/memcached.png)
 
 ## Included plugins
 
