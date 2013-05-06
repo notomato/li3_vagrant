@@ -16,7 +16,8 @@ exec { "apt-get update":
 }
 
 exec { "apt-get upgrade":
-	 command => 'sudo apt-get -y dist-upgrade'
+	refreshonly => true,
+	command => 'sudo apt-get -y dist-upgrade'
 }
 
 include stdlib
@@ -80,9 +81,15 @@ exec { "resources_permissions":
 exec {
     "install_redis_commander":
         command => "npm install -g redis-commander",
-        require => Package['redis'];
+        require => [
+            Package['redis-server'],
+            Exec["install_nodejs"]
+        ];
     "run_redis_commander":
             command => "redis-commander -p 7500&",
-            require => Package['redis'];
+            require => [
+                Package['redis-server'],
+                Exec["install_redis_commander"]
+            ];
 
 }
