@@ -34,7 +34,10 @@ class dev {
 
     exec {
         "install_nodejs":
-            command => "apt-get install nodejs -y",
+            command => [
+                "apt-get install nodejs -y",
+                "apt-get install npm -y"
+            ]
             require => Exec["add_nodejs_repo"];
 
     }
