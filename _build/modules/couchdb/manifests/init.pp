@@ -1,8 +1,17 @@
 class couchdb {
 
+	 exec {
+        "add_couchdb_ppa":
+            command => '/usr/bin/add-apt-repository ppa:longsleep/couchdb -y',
+            require => [
+                Package['python-software-properties'],
+                Exec['apt-get update']
+            ]
+    }
+
     package { 'couchdb':
         ensure => latest,
-        require => Exec['apt-get update']
+        require => Exec['add_couchdb_ppa']
     }
 
     service { 'couchdb':

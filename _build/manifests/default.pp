@@ -83,12 +83,14 @@ exec {
         command => "npm install -g redis-commander",
         require => [
             Package['redis-server'],
+            Exec["add_nodejs_repo"],
             Exec["install_nodejs"]
         ];
     "run_redis_commander":
             command => "redis-commander -p 7500&",
             require => [
                 Package['redis-server'],
+                Exec["add_nodejs_repo"],
                 Exec["install_redis_commander"]
             ];
 
