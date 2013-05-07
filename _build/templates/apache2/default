@@ -7,6 +7,7 @@
     Alias /tools/apc "/usr/share/doc/php-apc/apc.php"
     Alias /tools/memcached "/vagrant/_build/templates/memcached/memcache.php"
     Alias /tools/rockmongo "/var/www/tools/rockmongo"
+    Alias /tools/beanstalk_console "/var/www/tools/beanstalk_console/public"
 
 	<Directory />
 		Options FollowSymLinks

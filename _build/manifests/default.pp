@@ -73,6 +73,12 @@ file { "/etc/default/beanstalkd":
 	require => Package["beanstalkd"]
 }
 
+file { "/etc/init.d/beanstalkd":
+	ensure => present,
+	source => "/vagrant/_build/templates/beanstalkd/init.d",
+	require => Package["beanstalkd"]
+}
+
 exec { "resources_permissions":
     command => "chmod -R 0777 /vagrant/app/resources"
 }
@@ -102,3 +108,17 @@ exec {
 		command => "git clone https://github.com/iwind/rockmongo.git /var/www/tools/rockmongo",
 		require => Package['git']
 }
+
+# https://github.com/ptrofimov/beanstalk_console.git
+exec {
+	"install_beanstalk_console":
+		command => "git clone https://github.com/ptrofimov/beanstalk_console.git /var/www/tools/beanstalk_console",
+		require => Package['git']
+}
+
+file { "/var/www/tools/beanstalk_console/lib/include.php":
+	ensure => present,
+	require => Exec['install_beanstalk_console'],
+	source => "/vagrant/_build/templates/beanstalk_console/include.php"
+}
+

@@ -83,7 +83,7 @@ Web interface: http://localhost:28018/ or http://192.168.50.4:28017
 
 ![Mongodb](https://raw.github.com/notomato/li3_vagrant/master/_docs/img/mongodb.png "Optional title")
 
-Rockmongo Admin GUI
+Rockmongo Admin GUI - default user/pass is admin/admin
 
 http://localhost:8081/tools/rockmongo or http://192.168.50.4/tools/rockmongo
 
@@ -108,6 +108,13 @@ Memcache monitoring panel
 http://localhost:8081/tools/memcached/ or http://192.168.50.4/tools/memcached
 
 ![apc](https://raw.github.com/notomato/li3_vagrant/master/_docs/img/memcached.png)
+
+#### Beanstalkd
+
+Beanstalk console (https://github.com/ptrofimov/beanstalk_console)
+
+http://localhost:8081/tools/beanstalk_console/ or http://192.168.50.4/tools/beanstalk_console
+
 
 ## Included plugins
 
