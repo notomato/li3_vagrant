@@ -4,4 +4,5 @@
 libraries/*
 htdocs/app/resources/tmp/cache/templates/*
 htdocs/libraries/*
+htdocs/app
 composer.lock

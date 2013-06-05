@@ -128,6 +128,6 @@ Some popular plugins included, managed by composer. Take a look at composer.json
  - li3_queue
  - manual
 
+## Integrating into your own project
 
-
-
+Todo

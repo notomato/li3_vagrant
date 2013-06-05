@@ -1,9 +1,22 @@
 {
+    "name": "notomato/li3_vagrant",
+    "description": "Provides a complete vagrant box, with everything you need to get started with the Lithium PHP framework",
+    "keywords": ["vagrant", "vm", "lithium", "li3"],
+    "homepage": "https://github.com/notomato/li3_vagrant",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Christian Foster",
+            "email": "christian.foster@gmail.com",
+            "homepage": "http://christianfoster.com/"
+        }
+    ],
     "require": {
         "php": ">=5.3.6",
         "composer/installers": "1.0.*@dev",
         "ServiceRunner/li3_debug": "dev-master",
-        "unionofrad/lithium": "dev-master",
+        "unionofrad/lithium": "dev-dev",
+        "unionofrad/framework": "dev-master",
         "unionofrad/li3_quality": "dev-master",
         "unionofrad/li3_docs": "dev-master",
         "unionofrad/li3_queue": "dev-master",
@@ -93,12 +106,10 @@
     ],
     "extra": {
         "installer-paths": {
-            "htdocs": [
-                "unionofrad/framework"
-            ],
             "htdocs/libraries/{$name}/": [
                 "tmaiaroto/li3_access",
                 "primetheus/li3_paginate",
+                "ServiceRunner/li3_debug",
                 "unionofrad/li3_queue",
                 "unionofrad/li3_quality",
                 "unionofrad/lithium",

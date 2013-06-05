@@ -122,3 +122,14 @@ file { "/var/www/tools/beanstalk_console/lib/include.php":
 	source => "/vagrant/_build/templates/beanstalk_console/include.php"
 }
 
+# copy app files
+exec {
+	"copy_app":
+		command => "cp -r /vagrant/htdocs/libraries/unionofrad/framework/app /vagrant/htdocs/"
+}
+
+# library config
+file { "/vagrant/htdocs/app/config/bootstrap/libraries.php":
+	ensure => present,
+	source => "/vagrant/_build/templates/app/config/bootstrap/libraries.php"
+}
