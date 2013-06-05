@@ -5,7 +5,7 @@ This provides a complete vagrant box, with everything you need to get started wi
 To get started in 4 steps:
 
 ~~~bash
-git clone https://raw.github.com/notomato/li3_vagrant
+git clone https://github.com/notomato/li3_vagrant
 cd li3_vagrant
 composer install
 vagrant up
@@ -121,12 +121,11 @@ http://localhost:8081/tools/beanstalk_console/ or http://192.168.50.4/tools/bean
 Some popular plugins included, managed by composer. Take a look at composer.json to see how to add other plugins from git repositories.
 
  - li3_access
+ - li3_debug
  - li3_docs
- - li3_quality
  - li3_paginate
  - li3_quality
  - li3_queue
- - lithium
  - manual
 
 

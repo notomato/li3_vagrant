@@ -2,6 +2,7 @@
     "require": {
         "php": ">=5.3.6",
         "composer/installers": "1.0.*@dev",
+        "ServiceRunner/li3_debug": "dev-master",
         "unionofrad/lithium": "dev-master",
         "unionofrad/li3_quality": "dev-master",
         "unionofrad/li3_docs": "dev-master",
@@ -11,6 +12,32 @@
         "unionofrad/manual": "dev-master"
     },
     "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "ServiceRunner/li3_debug",
+                "version": "dev-master",
+                "type": "lithium-library",
+                "source": {
+                    "url": "https://github.com/ServiceRunner/li3_debug.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "unionofrad/framework",
+                "version": "dev-master",
+                "type": "lithium-library",
+                "source": {
+                    "url": "https://github.com/UnionOfRAD/framework.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
         {
             "type": "package",
             "package": {
@@ -64,8 +91,24 @@
             }
         }
     ],
+    "extra": {
+        "installer-paths": {
+            "htdocs": [
+                "unionofrad/framework"
+            ],
+            "htdocs/libraries/{$name}/": [
+                "tmaiaroto/li3_access",
+                "primetheus/li3_paginate",
+                "unionofrad/li3_queue",
+                "unionofrad/li3_quality",
+                "unionofrad/lithium",
+                "unionofrad/manual",
+                "unionofrad/li3_docs"
+            ]
+        }
+    },
     "config": {
-        "vendor-dir": "libraries/"
+        "vendor-dir": "htdocs/libraries/"
     },
     "minimum-stability": "dev"
 }

@@ -1,7 +1,7 @@
 <VirtualHost *:80>
 	ServerAdmin webmaster@localhost
 
-	DocumentRoot /vagrant/app/webroot
+	DocumentRoot /vagrant/htdocs/app/webroot
 
     Alias /tools/phpmyadmin "/usr/share/phpmyadmin/"
     Alias /tools/apc "/usr/share/doc/php-apc/apc.php"
@@ -14,7 +14,7 @@
 		AllowOverride All
 	</Directory>
 
-	<Directory /vagrant/app/webroot/>
+	<Directory /vagrant/htdocs/app/webroot/>
 		Options Indexes FollowSymLinks MultiViews
 		AllowOverride All
 		Order allow,deny

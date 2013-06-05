@@ -1,7 +1,7 @@
 .idea
 .vagrant
 .DS_Store
-libraries 
-app/resources/tmp/cache/templates/*
 libraries/*
+htdocs/app/resources/tmp/cache/templates/*
+htdocs/libraries/*
 composer.lock
