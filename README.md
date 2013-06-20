@@ -2,6 +2,9 @@
 
 This provides a complete vagrant box, with everything you need to get started with the Lithium PHP framework.
 
+__Note:__ still trying to work out best way to include this into existing projects, and if there are any errors on 
+building the VM please feel free to create an issue. 
+
 To get started in 4 steps:
 
 ~~~bash
